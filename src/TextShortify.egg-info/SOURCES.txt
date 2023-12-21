@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+src/TextShortify/__init__.py
+src/TextShortify.egg-info/PKG-INFO
+src/TextShortify.egg-info/SOURCES.txt
+src/TextShortify.egg-info/dependency_links.txt
+src/TextShortify.egg-info/top_level.txt
+src/TextShortify/components/__init__.py
+src/TextShortify/config/__init__.py
+src/TextShortify/config/configuration.py
+src/TextShortify/constants/__init__.py
+src/TextShortify/entity/__init__.py
+src/TextShortify/logging/__init__.py
+src/TextShortify/pipeline/__init__.py
+src/TextShortify/utils/__init__.py
+src/TextShortify/utils/common.py
