@@ -39,25 +39,34 @@ class DataIngestion:
 
 
 
-    def read_jsonl_to_dataframe(file_path, csv_file_path):
+    def read_jsonl_to_dataframe(self):
         """
-        Reads a JSONL file, converts it into a pandas DataFrame, saves it as a CSV file, and downloads it.
+        Reads all JSONL files in a directory, converts them into pandas DataFrames, saves them as CSV files.
         
         Parameters:
-        file_path (str): Path to the JSONL file to be read.
-        csv_file_path (str): Path to save the CSV file.
+        jsonl_dir (str): Path to the directory containing JSONL files.
+        csv_dir (str): Path to save the CSV files.
 
         Returns:
-        pandas.DataFrame: DataFrame containing the data from the JSONL file.
+        None
         """
-        data = []
-        with open(file_path, 'r') as file:
-            for line in file:
-                data.append(json.loads(line))
-        
-        df = pd.DataFrame(data)
-        
-        # Save the DataFrame to a CSV file
-        df.to_csv(csv_file_path, index=False)
-        
-        return df
+        jsonl_dir = self.config.jsonl_file
+        csv_dir = self.config.csv_file
+
+        # Loop over all files in the directory
+        for filename in os.listdir(jsonl_dir):
+            # Check if the file is a .jsonl file
+            if filename.endswith('.jsonl'):
+                jsonl_file_path = os.path.join(jsonl_dir, filename)
+                csv_file_path = os.path.join(csv_dir, filename.replace('.jsonl', '.csv'))
+
+                data = []
+                with open(jsonl_file_path, 'r') as file:
+                    for line in file:
+                        data.append(json.loads(line))
+                
+                df = pd.DataFrame(data)
+                
+                # Save the DataFrame to a CSV file
+                df.to_csv(csv_file_path, index=False)
+
