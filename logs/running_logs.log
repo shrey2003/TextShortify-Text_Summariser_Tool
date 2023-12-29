@@ -1,1 +1,227 @@
 [2023-12-22 20:49:51,241: INFO: main: Welcome to TextShortify]
+[2023-12-29 22:50:17,530: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-29 22:50:17,538: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-29 22:50:17,546: INFO: common: created directory at: artifacts]
+[2023-12-29 22:50:17,546: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-29 22:50:28,241: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-29 22:50:28,249: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-29 22:50:28,249: INFO: common: created directory at: artifacts]
+[2023-12-29 22:50:28,257: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-29 22:50:36,757: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-29 22:50:36,765: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-29 22:50:36,765: INFO: common: created directory at: artifacts]
+[2023-12-29 22:50:36,773: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:26:47,603: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:26:47,620: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:26:47,620: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:26:47,620: INFO: common: created directory at: artifacts]
+[2023-12-30 00:26:47,620: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:26:50,439: INFO: data_ingestion: artifacts/data_ingestion/legal_case_dataset.zip download! with following info: 
+Content-Type: text/html; charset=utf-8
+X-Robots-Tag: noindex, nofollow, nosnippet
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Fri, 29 Dec 2023 18:56:49 GMT
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Content-Security-Policy: require-trusted-types-for 'script';report-uri https://csp.withgoogle.com/csp/docs-tt
+Referrer-Policy: origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Server: GSE
+Set-Cookie: NID=511=qkueDmkuA09jGk7FZuVDo5M0KKs9wWr1v1mlxGxlQE7NvSTNB2TNlPqtztUidAtBej75rmBAzzslGEnpQd-opOv0jQqiYNH_voH_7lfYrd3VeEJNLHSOc4ITwV1N6qVUb7jAq3t6sEXTfDZDjPlIZS9lpk-MBwZGLEhSECqj8us; expires=Sat, 29-Jun-2024 18:56:49 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Accept-Ranges: none
+Vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site,Accept-Encoding
+Connection: close
+Transfer-Encoding: chunked
+
+]
+[2023-12-30 00:26:50,621: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 15, in main
+    data_ingestion.extract_zip_file()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\components\data_ingestion.py", line 37, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\zipfile.py", line 1336, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-12-30 00:27:18,555: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:27:18,555: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:27:18,555: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:27:18,568: INFO: common: created directory at: artifacts]
+[2023-12-30 00:27:18,568: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:27:21,605: ERROR: main: HTTP Error 429: Too Many Requests]
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\components\data_ingestion.py", line 19, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+[2023-12-30 00:27:31,160: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:27:31,160: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:27:31,170: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:27:31,170: INFO: common: created directory at: artifacts]
+[2023-12-30 00:27:31,170: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:27:33,908: ERROR: main: HTTP Error 429: Too Many Requests]
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\components\data_ingestion.py", line 19, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+[2023-12-30 00:29:31,910: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:29:31,926: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:29:31,926: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:29:31,926: INFO: common: created directory at: artifacts]
+[2023-12-30 00:29:31,926: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:29:31,926: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/legal_case_dataset.zip']
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 15, in main
+    data_ingestion.extract_zip_file()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\components\data_ingestion.py", line 37, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\zipfile.py", line 1251, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/legal_case_dataset.zip'
+[2023-12-30 00:30:07,216: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:30:07,232: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:30:07,248: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:30:07,248: INFO: common: created directory at: artifacts]
+[2023-12-30 00:30:07,248: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:30:07,248: ERROR: main: [Errno 13] Permission denied: 'artifacts/data_ingestion/']
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 15, in main
+    data_ingestion.extract_zip_file()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\components\data_ingestion.py", line 37, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\zipfile.py", line 1251, in __init__
+    self.fp = io.open(file, filemode)
+PermissionError: [Errno 13] Permission denied: 'artifacts/data_ingestion/'
+[2023-12-30 00:30:27,276: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:30:27,291: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:30:27,308: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:30:27,308: INFO: common: created directory at: artifacts]
+[2023-12-30 00:30:27,308: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:30:27,308: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/legal_case_document']
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 15, in main
+    data_ingestion.extract_zip_file()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\components\data_ingestion.py", line 37, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\Shreya Mishra\.conda\envs\textShortify\lib\zipfile.py", line 1251, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/legal_case_document'
+[2023-12-30 00:30:34,781: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:30:34,798: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:30:34,798: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:30:34,805: INFO: common: created directory at: artifacts]
+[2023-12-30 00:30:34,806: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:30:37,322: ERROR: main: 'DataIngestionConfig' object has no attribute 'jsonl_file']
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 16, in main
+    data_ingestion.read_jsonl_to_dataframe()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\components\data_ingestion.py", line 53, in read_jsonl_to_dataframe
+    jsonl_dir = self.config.jsonl_file
+AttributeError: 'DataIngestionConfig' object has no attribute 'jsonl_file'
+[2023-12-30 00:33:18,431: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:33:18,431: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:33:18,431: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:33:18,431: INFO: common: created directory at: artifacts]
+[2023-12-30 00:33:18,431: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:33:18,431: ERROR: main: __init__() got an unexpected keyword argument 'jsonl_file']
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 12, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\config\configuration.py", line 20, in get_data_ingestion_config
+    data_ingestion_config = DataIngestionConfig(
+TypeError: __init__() got an unexpected keyword argument 'jsonl_file'
+[2023-12-30 00:34:18,155: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:34:18,155: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:34:18,155: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:34:18,165: INFO: common: created directory at: artifacts]
+[2023-12-30 00:34:18,165: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:34:18,165: ERROR: main: __init__() got an unexpected keyword argument 'jsonl_file']
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    data_ingestion.main()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\pipeline\stage_1_data_ingestion.py", line 12, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "d:\desktop\final_projects\textshortify-text_summariser_tool\src\TextShortify\config\configuration.py", line 20, in get_data_ingestion_config
+    data_ingestion_config = DataIngestionConfig(
+TypeError: __init__() got an unexpected keyword argument 'jsonl_file'
+[2023-12-30 00:34:52,227: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 00:34:52,227: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 00:34:52,242: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 00:34:52,242: INFO: common: created directory at: artifacts]
+[2023-12-30 00:34:52,242: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 00:35:08,096: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
