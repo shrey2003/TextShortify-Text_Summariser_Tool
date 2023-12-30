@@ -1,9 +1,6 @@
-import os
 from TextShortify.logging import logger
 from transformers import AutoTokenizer
 from datasets import Dataset
-import pandas as pd
-import pyarrow as pa
 from TextShortify.entity import DataTransformationConfig
 
 class DataTransformation(Dataset):

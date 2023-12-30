@@ -345,3 +345,19 @@ x==========x]
 [2023-12-30 22:54:08,752: INFO: common: yaml file: params.yaml loaded successfully]
 [2023-12-30 22:54:08,760: INFO: common: created directory at: artifacts]
 [2023-12-30 22:54:08,760: INFO: common: created directory at: artifacts/data_transformation]
+[2023-12-30 23:43:30,791: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-30 23:43:30,808: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 23:43:30,818: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 23:43:30,818: INFO: common: created directory at: artifacts]
+[2023-12-30 23:43:30,818: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-30 23:43:46,297: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-12-30 23:43:46,297: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-12-30 23:43:46,313: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 23:43:46,314: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 23:43:46,314: INFO: common: created directory at: artifacts]
+[2023-12-30 23:43:46,314: INFO: common: created directory at: artifacts/data_transformation]
+[2023-12-30 23:43:57,010: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
