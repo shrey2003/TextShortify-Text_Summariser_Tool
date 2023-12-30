@@ -8,3 +8,9 @@ data_ingestion:
   unzip_dir: artifacts/data_ingestion
   jsonl_file: artifacts/data_ingestion/
   csv_file: artifacts/data_ingestion/
+
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/legal_data
+  tokenizer_name: nsi319/legal-led-base-16384

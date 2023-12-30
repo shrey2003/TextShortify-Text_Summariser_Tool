@@ -9,3 +9,9 @@ class DataIngestionConfig:
     unzip_dir: Path
     jsonl_file: Path
     csv_file: Path
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    data_path: Path
+    tokenizer_name: Path
