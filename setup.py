@@ -6,9 +6,9 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "Text-Summarizer-Project"
+REPO_NAME = "Doc-Q"
 AUTHOR_USER_NAME = "Shreya Mishra"
-SRC_REPO = "TextShortify"
+SRC_REPO = "DocQnA"
 AUTHOR_EMAIL = "shreymishra0307@gmail.com"
 
 

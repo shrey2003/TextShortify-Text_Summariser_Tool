@@ -1,6 +1,6 @@
-from TextShortify.config.configuration import ConfigurationManager
-from TextShortify.components.data_ingestion import DataIngestion
-from TextShortify.logging import logger
+from DocQnA.config.configuration import ConfigurationManager
+from DocQnA.components.data_ingestion import DataIngestion
+from DocQnA.logging import logger
 
 
 class DataIngestionTrainingPipeline:

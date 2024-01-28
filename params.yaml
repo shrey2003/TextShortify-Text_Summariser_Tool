@@ -1,1 +1,38 @@
-key: value
+TrainingArguments:
+  per_device_train_batch_size: 32
+        # Specify the training batch size per device
+
+  gradient_accumulation_steps: 1
+        # Specify the number of steps for gradient accumulation
+
+  warmup_steps: 5
+  # Specify the number of warm-up steps
+
+  max_steps: 100
+  # Specify the maximum number of steps
+
+  learning_rate: 2e-4
+  # Specify the learning rate
+
+  fp16: not torch.cuda.is_bf16_supported()  # Set whether to use 16-bit floating-point precision (fp16)
+
+  bf16: torch.cuda.is_bf16_supported()
+  # Set whether to use Bfloat16
+
+  logging_steps: 2
+  # Specify the logging steps
+
+  optim: "adamw_8bit"
+  # Specify the optimizer (here using 8-bit AdamW)
+
+  weight_decay: 0.01
+  # Specify the weight decay value
+
+  lr_scheduler_type: "linear"
+  # Specify the type of learning rate scheduler (linear)
+
+  seed: 3407
+  # Specify the random seed
+
+  output_dir: "outputs"
+  # Specify the output directory

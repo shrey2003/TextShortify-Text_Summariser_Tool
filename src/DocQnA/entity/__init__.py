@@ -15,3 +15,17 @@ class DataTransformationConfig:
     root_dir: Path
     data_path: Path
     tokenizer_name: Path
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    max_seq_length: int
+    dtype: str
+    load_in_4bit: bool
+    model_name: str
+    r: int
+    target_modules: list
+    lora_alpha: int
+    lora_dropout: int
+    bias: str
+    use_gradient_checkpointing: bool
+    random_state: int
