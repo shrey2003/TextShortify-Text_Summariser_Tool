@@ -53,14 +53,21 @@
         </div>
       </header>
  
-    <h1>Question Answering System</h1>
+    <!-- <h1>Question Answering System</h1> -->
 
-        <div class="conversation-history">
+        <div class="chat-message">
             {% for message in session['history'] %}
                 {% if loop.index0 is divisibleby 2 %}
+                <div class="chat-message user">
+                    <!-- User's message goes here -->
                     <p><strong>User:</strong> {{ message }}</p>
+                </div>
+                    
                 {% else %}
-                    <p><strong>Chatbot:</strong> {{ message }}</p>
+                <div class="chat-message assistant">
+                    <!-- Assistant's message goes here -->
+                    <p><strong>🤖 Chatbot:</strong> {{ message }}</p>
+                </div>
                 {% endif %}
             {% endfor %}
         </div>
@@ -114,7 +121,8 @@
   <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+  </script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
