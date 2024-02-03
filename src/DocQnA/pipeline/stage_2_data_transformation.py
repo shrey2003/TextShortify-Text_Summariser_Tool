@@ -1,9 +1,9 @@
 import os
 import pandas as pd
 import pyarrow as pa
-from TextShortify.config.configuration import ConfigurationManager
-from TextShortify.components.data_transformation import DataTransformation
-from TextShortify.logging import logger
+from DocQnA.config.configuration import ConfigurationManager
+from DocQnA.components.data_transformation import DataTransformation
+from DocQnA.logging import logger
 
 import logging
 

@@ -1,6 +1,6 @@
-from TextShortify.constants import *
-from TextShortify.utils.common import read_yaml, create_directories
-from TextShortify.entity import DataIngestionConfig, DataTransformationConfig
+from DocQnA.constants import *
+from DocQnA.utils.common import read_yaml, create_directories
+from DocQnA.entity import DataIngestionConfig, DataTransformationConfig
 
 class ConfigurationManager:
     def __init__(self,config_filepath = CONFIG_FILE_PATH,params_filepath = PARAMS_FILE_PATH):

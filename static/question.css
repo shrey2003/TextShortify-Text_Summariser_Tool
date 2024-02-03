@@ -133,7 +133,7 @@ footer {
 }
 
 .social-icons img {
-    max-width: 30px;
+    max-width: 42px;
     height: auto;
 }
 
@@ -1070,7 +1070,7 @@ footer {
 }
 
 .social-icons img {
-    max-width: 30px;
+    max-width: 42px;
     height: auto;
 }
 .col-md-4
@@ -1536,5 +1536,40 @@ footer {
     .about-banner { max-width: 450px; }
 
   }
-
+  .caty
+  {
+    height: 100vh !important;
+    width: 100vh !important;
+  }
+  
+  .footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:118%;
+  }
+  
+  
+  /* .footer .col-md-4 {
+    flex: 1;
+    text-align: center;
+  } */
+  
+  .social-icons {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; Allow the icons to wrap onto multiple lines if necessary */
+    display: inline-flex;
+  }
+  
+  .social-icons li {
+    margin: 10px; /* Add space around each icon */
+  }
+  
+  .social-icons img {
+    width: 44px;
+    height: auto;
+  }
+  
 

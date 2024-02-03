@@ -1,7 +1,7 @@
-from TextShortify.logging import logger
+from DocQnA.logging import logger
 from transformers import AutoTokenizer
 from datasets import Dataset
-from TextShortify.entity import DataTransformationConfig
+from DocQnA.entity import DataTransformationConfig
 
 class DataTransformation(Dataset):
     def __init__(self,data,config: DataTransformationConfig):

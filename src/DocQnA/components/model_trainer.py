@@ -1,7 +1,7 @@
-from TextShortify.logging import logger
+from DocQnA.logging import logger
 from transformers import AutoTokenizer
 from datasets import Dataset
-from TextShortify.entity import ModelTrainerConfig
+from DocQnA.entity import ModelTrainerConfig
 from transformers import TrainingArguments
 import torch
 from unsloth import FastLanguageModel

@@ -4,9 +4,9 @@ import zipfile
 import pandas as pd
 import json
 from pathlib import Path
-from TextShortify.logging import logger
-from TextShortify.utils.common import get_size
-from TextShortify.entity import DataIngestionConfig
+from DocQnA.logging import logger
+from DocQnA.utils.common import get_size
+from DocQnA.entity import DataIngestionConfig
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
