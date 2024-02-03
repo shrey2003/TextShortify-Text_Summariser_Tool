@@ -143,7 +143,7 @@ footer {
 }
 
 .social-icons img {
-    max-width: 30px;
+    max-width: 42px;
     height: auto;
 }
 
@@ -852,12 +852,12 @@ footer {
 }
 
 .social-icons img {
-    max-width: 30px;
+    max-width: 42px;
     height: auto;
 }
 .col-md-4
 {
-  margin-top: 10%;
+  margin-top: 4%;
 }
 
   /*-----------------------------------*\
@@ -1352,7 +1352,11 @@ footer {
     overflow-y: auto; /* Enable scrolling if the content exceeds the maximum height */
     transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
     margin-top: 7%;
+    margin-left: 14%;
+    margin-right: 14%;
+    font-size: x-small;
 }
+
 
 .chat-message.user {
     background-color: #ddd; /* Light grey background for user's messages */
@@ -1376,4 +1380,36 @@ footer {
 
 .chat-message.assistant:hover {
     background: linear-gradient(135deg, #0066cc, #0080ff); /* Gradient background for assistant's messages on hover */
+}
+
+
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:118%;
+}
+
+
+/* .footer .col-md-4 {
+    flex: 1;
+    text-align: center;
+} */
+
+.social-icons {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; Allow the icons to wrap onto multiple lines if necessary */
+    display: inline-flex;
+}
+
+.social-icons li {
+    margin: 10px; /* Add space around each icon */
+}
+
+.social-icons img {
+    width: 44px;
+    height: auto;
 }

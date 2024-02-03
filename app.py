@@ -48,25 +48,15 @@ def conversation_chat(user_input, conversation_chain):
     - user_input(str): User input as a text
     - conversation_chain: Instance of ConversationalRetrievalChain 
     """
-    # result = conversation_chain.invoke({"question": user_input, "chat_history": session['history']})
+    result = conversation_chain.invoke({"question": user_input, "chat_history": session['history']})
     # print(result)
-    result={}
-    result["answer"]="Yes"
+    # result={}
+    # result["answer"]="Yes"
     print(result)
     # session['past'].append(user_input)
     # session['generated'].append(result["answer"])
     return result["answer"]
 
-# # Step 3: Load the pre-trained model
-# try:
-#     model = AutoModelForQuestionAnswering.from_pretrained(model_name)
-# except OSError:
-#     print(f"Model not found locally. Downloading {model_name}...")
-#     model = AutoModelForQuestionAnswering.from_pretrained(model_name)
-
-# # Step 4: Define a tokenizer
-# tokenizer = AutoTokenizer.from_pretrained(model_name)
-# Global variable to hold the conversation history
 global_history = []
 def clean_text(text):
     """
@@ -151,63 +141,6 @@ def new_chat():
 def index():
     return render_template("index.html")
         
-
-#     #Step 4: Create Vector Store and store uploaded Pdf file to in-mempry Vector Database FAISS
-#     # and return instance of vector store
-#         vector_store = utils.create_vector_store(text)
-#         # cleaned_text = clean_text(text)
-
-#         question = request.form["question"]
-#         response = "Yes"
-#         if vector_store:
-#         #Step 5: If Vector Store created successful with chunks of PDF files
-#         # then Create the chain object
-#             chain = create_conversational_chain(llm, vector_store)
-#             response=conversation_chat(question, chain)
-
-
-
-# @app.route("/", methods=["GET", "POST"])
-# def index():
-#     if request.method == "POST":
-#         file = request.files["file"]
-#         # print(file)
-#         # Pass the path of the saved file to the create_vector_store function
-#         if file:
-#             pdf_reader = PyPDF2.PdfReader(file)
-#             text = ''
-#             session['file'] = file
-#             for page_num in range(len(pdf_reader.pages)):
-#                 page = pdf_reader.pages[page_num]
-#                 text += page.extract_text()
-#             # return text
-#         # vector_store = utils.create_vector_store(text)
-#         # text = file.read().decode("utf-8")
-#         llm = utils.create_llm()
-
-#     #Step 4: Create Vector Store and store uploaded Pdf file to in-mempry Vector Database FAISS
-#     # and return instance of vector store
-#         vector_store = utils.create_vector_store(text)
-#         # cleaned_text = clean_text(text)
-
-#         question = request.form["question"]
-#         response = "Yes"
-#         if vector_store:
-#         #Step 5: If Vector Store created successful with chunks of PDF files
-#         # then Create the chain object
-#             chain = create_conversational_chain(llm, vector_store)
-#             response=conversation_chat(question, chain)
-
-#         # outputs = model(**inputs)
-#         # session['past'].append(question)
-#         # session['generated'].append(response)
-
-#         # print(response)
-#         # return redirect(url_for('index'))
-#         # return render_template("result.html", question=question, answer=response)
-#         # return render_template("result.html")
-#     # else:
-#     #     return render_template("result.html")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=7000)
