@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta property="og:title" content="Purr-fect">
+        <meta property="og:description" content="Purr-fect is a text summarization web application designed to provide users with meow-tastic summaries.">
+        <meta property="og:image" content="https://purr-fect.onrender.com/static/favipf1.png"> -->
+  <title>DOCKY</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="/static/favipf1.png" type="image/png">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/static/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top" class="dark_theme">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1 class="h1 logo">
+        <a href="#">Docky-QA<span>.</span></a>
+      </h1>
+
+      <div class="navbar-actions">
+
+
+      </div>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="/" class="navbar-link">Home.</a>
+          </li>
+          <li>
+            <a href="/upload" class="navbar-link">Upload Doc.</a>
+          </li>
+          <li>
+            <a href="/chat" class="navbar-link">Start QnA.</a>
+          </li>
+
+          <li>
+            <a href="/contact" class="navbar-link">Contact.</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+<main>
+    <article class="container">
+
+      <!--
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+
+        <figure class="hero-banner">
+            <!-- <img src="/static/ma.svg" alt=""
+              class="caty"> -->
+              <dotlottie-player class="caty" src="https://lottie.host/bcfb712e-bc1e-4be9-9d80-78723fa30799/TRAZATL3Ga.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+
+        </figure>
+
+        <div class="hero-content">
+          <h2 class="h2 hero-title">Welcome Humans</h2>
+          <h6 class="h6 hero-title">Hello! I am Docky 🤖</h6> 
+          <h6 class="h6 hero-title">I am AI Chatbot and can talk on the behalf of your document</h6>
+        <h6 class="h6 hero-title">So Let's Go! </h6>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Shreya Mishra 🤖</h3>
+            </div>
+        <div class="col-md-4 text-center">
+            <h3>Follow Me</h3>
+            <ul class="social-icons">
+              <a href="https://www.linkedin.com/in/anoop-johny-30a746181/"><img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn"></a>
+              <a href="https://github.com/flyfir248"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+              <a href="https://pythonpythonme.netlify.app/index.html"><img src="{{ url_for('static', filename='insta.png') }}" alt="Instagram"></a>
+            </ul>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted">© 2023-2024 FeludaCoder.</p>
+                <p>All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- <footer>
+  <div class="container">
+    
+    <div class="row">
+      
+        <div class="col-md-4">
+            <h3>Shreya Mishra 🤖</h3>
+        </div>
+    <div class="col-md-4 text-center">
+        <h3>Follow Me</h3>
+        <ul class="social-icons">
+          <a href="https://www.linkedin.com/in/anoop-johny-30a746181/"><img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn"></a>
+          <a href="https://github.com/flyfir248"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+          <a href="https://pythonpythonme.netlify.app/index.html"><img src="{{ url_for('static', filename='insta.png') }}" alt="Instagram"></a>
+        </ul>
+    </div>
+</div>
+
+ 
+</footer> -->
+
+  <!--
+    - custom js link
+  -->
+  <script src="/static/script.js"></script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+  
+</body>
+
+</html>

@@ -13,10 +13,16 @@ torch
 notebook
 fastapi==0.78.0
 uvicorn==0.18.3
-Jinja2==3.1.2
+Jinja2==3.1.3
 ensure==1.0.2
 python-box==6.0.2
 trl
-unsloth
-
+langchain
+langchain-community
+sentence-transformers
+llama-cpp-python
+faiss-cpu
+streamlit
+streamlit_chat
+PyPDF2
 -e .

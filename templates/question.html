@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Question Answering App</title>
+    <link rel="stylesheet" href="https://cdn.discordapp.com/attachments/695222842090717570/836728394201579796/discord-style.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='res/favicon.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='question.css') }}">
+</head>
+<body id="top" class="dark_theme">
+
+    <header class="header" data-header>
+        <div class="container">
+    
+          <h1 class="h1 logo">
+            <a href="#">Docky-QA<span>.</span></a>
+          </h1>
+    
+          <div class="navbar-actions">
+    
+    
+          </div>
+    
+          <!-- <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+     -->
+          <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+    
+              <li>
+                <a href="/" class="navbar-link">Home.</a>
+              </li>
+              <li>
+                <a href="/upload" class="navbar-link">Upload Doc.</a>
+              </li>
+              <li>
+                <a href="/chat" class="navbar-link">Start QnA.</a>
+              </li>
+    
+              <li>
+                <a href="/contact" class="navbar-link">Contact.</a>
+              </li>
+    
+            </ul>
+          </nav>
+    
+        </div>
+      </header>
+ 
+    <p></p>
+    <!-- <p></p>
+    <p></p> -->
+    <!-- <a href="https://pythonpythonme.netlify.app/index.html"> -->
+    <div class="header-image">
+    <!-- <img src="../static/chatbot.jpg" alt="Header image"> -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <dotlottie-player src="https://lottie.host/95a92962-13f7-4a28-8060-3878545f76c7/9k0vZbdEyT.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+    </div>
+    </a>
+
+    <form method="post" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+        <!-- <label for="question">Ask a question:</label>
+        <input type="text" name="question" placeholder="Enter your question..."> -->
+        <input type="file" name="file" accept=".pdf" placeholder="Upload a PDF file...">
+        <input type="submit" value="Submit">
+    </form>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Shreya Mishra 🤖</h3>
+                </div>
+            <div class="col-md-4 text-center">
+                <h3>Follow Me</h3>
+                <ul class="social-icons">
+                  <a href="https://www.linkedin.com/in/anoop-johny-30a746181/"><img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn"></a>
+                  <a href="https://github.com/flyfir248"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+                  <a href="https://pythonpythonme.netlify.app/index.html"><img src="{{ url_for('static', filename='insta.png') }}" alt="Instagram"></a>
+                   
+                </ul>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-muted">© 2023-2024 FeludaCoder.</p>
+                    <p>All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="/static/script.js"></script>
+<!--
+  - ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+</body>
+</html>
