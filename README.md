@@ -1,5 +1,3 @@
-# TextShortify-Text_Summariser_Tool
-
 ## Workflows
 1. Update config-yaml
 2. Update params.yaml
@@ -9,3 +7,9 @@
 6. update the pipeline
 7. update the main. py
 8. update the app. py
+
+docker build -t docqna.azurecr.io/docqna:latest .
+
+docker login docqna.azurecr.io
+
+docker push docqna.azurecr.io/docqna:latest
