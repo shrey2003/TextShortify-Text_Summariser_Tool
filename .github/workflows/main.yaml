@@ -22,7 +22,7 @@ jobs:
     - name: Log in to registry
       uses: docker/login-action@v2
       with:
-        registry: https://DocQnA.azurecr.io/
+        registry: https://docqna.azurecr.io/
         username: ${{ secrets.AzureAppService_ContainerUsername_94025f5aed8b4af1922da4db3047fe61 }}
         password: ${{ secrets.AzureAppService_ContainerPassword_171b23b6a8f14e33a75f36c6dfd6802a }}
 
@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: DocQnA.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_94025f5aed8b4af1922da4db3047fe61 }}/chicken:${{ github.sha }}
+        tags: docqna.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_94025f5aed8b4af1922da4db3047fe61 }}/docqnA:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -45,7 +45,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'DocQnA'
+        app-name: 'docqna'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_bc7f25129a214516999e2f1cb58abd30 }}
-        images: 'chickenapp.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_94025f5aed8b4af1922da4db3047fe61 }}/chicken:${{ github.sha }}'
+        images: 'docqna.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_94025f5aed8b4af1922da4db3047fe61 }}/docqnA:${{ github.sha }}'

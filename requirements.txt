@@ -22,7 +22,7 @@ langchain-community
 sentence-transformers
 llama-cpp-python
 faiss-cpu
-streamlit
-streamlit_chat
+# streamlit
+# streamlit_chat
 PyPDF2
 -e .
