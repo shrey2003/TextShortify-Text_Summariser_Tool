@@ -52,13 +52,13 @@
         <div class="chat-message">
             {% for message in session['history'] %}
                 {% if loop.index0 is divisibleby 2 %}
-                <div class="chat-message user">
+                <div class="chat-message-user">
                     <!-- User's message goes here -->
                     <p><strong>User:</strong> {{ message }}</p>
                 </div>
                     
                 {% else %}
-                <div class="chat-message assistant">
+                <div class="chat-message-assistant">
                     <!-- Assistant's message goes here -->
                     <p><strong>🤖 Chatbot:</strong> {{ message }}</p>
                 </div>
@@ -93,7 +93,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 text-center">
-                    <h3>My MODELS</h3>
+                    <h3>MY MODELS</h3>
                     <ul class="social-icons">
                         <li><a href="https://huggingface.co/Feluda/Zephyr-7b-QnA"> <img src="{{ url_for('static', filename='hugging.svg') }}" alt="Icon 1"></a></li>
                         <li><a href="https://huggingface.co/Feluda/zephyr-finetuned-legal"><img src="{{ url_for('static', filename='hugging.svg') }}" alt="Icon 2"></a></li>

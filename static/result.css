@@ -1297,14 +1297,14 @@ footer {
     border-radius: 10px;
 } */
 
-.chat-message.user {
+.chat-message-user {
     background-color: #ddd; /* Light grey background for user's messages */
     color: black; /* Black text for user's messages */
     margin-left: auto; /* Align user's messages to the right */
     margin-right: 26vw; /* Space between user's messages and the right edge of the screen */
 }
 
-.chat-message.assistant {
+.chat-message-assistant {
     background-color: #0080ff; /* Blue background for assistant's messages */
     color: white; /* White text for assistant's messages */
     margin-right: auto; /* Align assistant's messages to the left */
@@ -1318,7 +1318,8 @@ footer {
 
 .chat-message {
     animation: fadeIn 0.5s ease-out;
-    background-image: url('../static/pxfuel.jpg');
+    /* background-image: url('../static/pxfuel.jpg'); */
+    background-image: url('../static/pxfuel.jpg'),linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     background-position: center; /* Center the background image */
     /* background-repeat: no-repeat; Prevent the background image from repeating */
     background-size: cover; /* Scale the background image to cover the entire chat box */
@@ -1328,7 +1329,7 @@ footer {
     transition: background-color 0.3s ease-in-out;
 }
 
-.chat-message.user::after {
+.chat-message-user::after {
     content: '';
     position: absolute;
     bottom: -10px; /* Adjust as needed */
@@ -1348,7 +1349,7 @@ footer {
     border-radius: 5px; /* Rounded corners */
     padding: 10px; /* Inner space around the content */
     margin: 10px 0; /* Space above and below the chat history */
-    max-height: 400px; /* Maximum height of the chat history */
+    height: 44%; /* Maximum height of the chat history */
     overflow-y: auto; /* Enable scrolling if the content exceeds the maximum height */
     transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
     margin-top: 7%;
@@ -1358,27 +1359,37 @@ footer {
 }
 
 
-.chat-message.user {
-    background-color: #ddd; /* Light grey background for user's messages */
-    color: black; /* Black text for user's messages */
-    margin-left: 26vw; /* Align user's messages to the right */
-    margin-right: auto; /* Space between user's messages and the right edge of the screen */
-    background: linear-gradient(135deg, #ddd, #ccc); /* Gradient background for user's messages */
+.chat-message-user
+{
+  background-color: #ddd;
+  color: black;
+  margin-left: 26vw;
+  margin-right: auto;
+  background: linear-gradient(135deg, #ddd, #ccc);
+  margin-top: 5%;
+  margin-bottom: 3%;
+  padding: 1%;
+  border-radius: 5px;
 }
 
-.chat-message.user:hover {
+.chat-message-user:hover {
     background: linear-gradient(135deg, #ccc, #ddd); /* Gradient background for user's messages on hover */
 }
 
-.chat-message.assistant {
-    background-color: #0080ff; /* Blue background for assistant's messages */
-    color: white; /* White text for assistant's messages */
-    margin-left: auto; /* Align assistant's messages to the left */
-    margin-right: 26vw;/* Space between assistant's messages and the left edge of the screen */
-    background: linear-gradient(135deg, #0080ff, #0066cc); /* Gradient background for assistant's messages */
+.chat-message-assistant
+{
+  background-color: #0080ff;
+  color: white;
+  margin-left: auto;
+  margin-right: 26vw;
+  background: linear-gradient(135deg, #0080ff, #0066cc);
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 1%;
+  border-radius: 5px;
 }
 
-.chat-message.assistant:hover {
+.chat-message-assistant:hover {
     background: linear-gradient(135deg, #0066cc, #0080ff); /* Gradient background for assistant's messages on hover */
 }
 
