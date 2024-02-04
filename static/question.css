@@ -1302,7 +1302,7 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 63px;
     }
 
     .navbar-link::before { height: 2px; }
