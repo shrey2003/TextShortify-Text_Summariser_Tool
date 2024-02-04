@@ -1,13 +1,16 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy container app to Azure Web App - dockyqna
 
 on:
- push:
+  push:
     branches:
       - main
- workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
- build:
+  build:
     runs-on: 'ubuntu-latest'
 
     steps:
@@ -20,17 +23,17 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://docqna.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername }}
-        password: ${{ secrets.AzureAppService_ContainerPassword }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_828b2ac528404486a1f85513e280b828 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_e96585d63dd3462d8c7eec684b4e0ce2 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: docqna.azurecr.io/docqna:${{ github.sha }}
+        tags: docqna.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_828b2ac528404486a1f85513e280b828 }}/docqna:${{ github.sha }}
         file: ./Dockerfile
 
- deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs: build
     environment:
@@ -44,5 +47,5 @@ jobs:
       with:
         app-name: 'dockyqna'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile }}
-        images: 'docqna.azurecr.io/docqna:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_988a31c8734e4fa3b073038ced94d6af }}
+        images: 'docqna.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_828b2ac528404486a1f85513e280b828 }}/docqna:${{ github.sha }}'
