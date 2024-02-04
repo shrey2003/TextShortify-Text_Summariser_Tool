@@ -1,6 +1,5 @@
 from flask import Flask, request, render_template,session, redirect, url_for
 import PyPDF2
-# from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 #enhance the quality of generated responses through retrieved documents.
 from langchain.chains import ConversationalRetrievalChain
 #Conversational memory is the mechanism that empowers a chatbot to respond 
@@ -18,8 +17,6 @@ app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SECRET_KEY'] = 'ABCDEF'
 
-# # Step 1: Choose a pre-trained model architecture
-# model_name = "bert-large-uncased-whole-word-masking-finetuned-squad"
 
 def create_conversational_chain(llm, vector_store):
     """
@@ -49,12 +46,9 @@ def conversation_chat(user_input, conversation_chain):
     - conversation_chain: Instance of ConversationalRetrievalChain 
     """
     result = conversation_chain.invoke({"question": user_input, "chat_history": session['history']})
-    # print(result)
-    # result={}
-    # result["answer"]="Yes"
+ 
     print(result)
-    # session['past'].append(user_input)
-    # session['generated'].append(result["answer"])
+   
     return result["answer"]
 
 global_history = []

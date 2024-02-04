@@ -5,12 +5,16 @@ import pandas as pd
 import json
 from pathlib import Path
 from DocQnA.logging import logger
-from DocQnA.utils.common import get_size
-from DocQnA.entity import DataIngestionConfig
+from DocQnA.utils.common import get_size, create_directories, read_yaml
 
 class DataIngestion:
-    def __init__(self, config: DataIngestionConfig):
-        self.config = config
+    def __init__(self):
+        # Load the configuration using the utility function
+        config = read_yaml('config.yaml')
+        self.config = config.data_ingestion
+
+        # Create directories using the utility function
+        create_directories([self.config.root_dir])
 
 
     
@@ -39,34 +43,34 @@ class DataIngestion:
 
 
 
-    def read_jsonl_to_dataframe(self):
-        """
-        Reads all JSONL files in a directory, converts them into pandas DataFrames, saves them as CSV files.
+    # def read_jsonl_to_dataframe(self):
+    #     """
+    #     Reads all JSONL files in a directory, converts them into pandas DataFrames, saves them as CSV files.
         
-        Parameters:
-        jsonl_dir (str): Path to the directory containing JSONL files.
-        csv_dir (str): Path to save the CSV files.
+    #     Parameters:
+    #     jsonl_dir (str): Path to the directory containing JSONL files.
+    #     csv_dir (str): Path to save the CSV files.
 
-        Returns:
-        None
-        """
-        jsonl_dir = self.config.jsonl_file
-        csv_dir = self.config.csv_file
+    #     Returns:
+    #     None
+    #     """
+    #     jsonl_dir = self.config.jsonl_file
+    #     csv_dir = self.config.csv_file
 
-        # Loop over all files in the directory
-        for filename in os.listdir(jsonl_dir):
-            # Check if the file is a .jsonl file
-            if filename.endswith('.jsonl'):
-                jsonl_file_path = os.path.join(jsonl_dir, filename)
-                csv_file_path = os.path.join(csv_dir, filename.replace('.jsonl', '.csv'))
+    #     # Loop over all files in the directory
+    #     for filename in os.listdir(jsonl_dir):
+    #         # Check if the file is a .jsonl file
+    #         if filename.endswith('.jsonl'):
+    #             jsonl_file_path = os.path.join(jsonl_dir, filename)
+    #             csv_file_path = os.path.join(csv_dir, filename.replace('.jsonl', '.csv'))
 
-                data = []
-                with open(jsonl_file_path, 'r') as file:
-                    for line in file:
-                        data.append(json.loads(line))
+    #             data = []
+    #             with open(jsonl_file_path, 'r') as file:
+    #                 for line in file:
+    #                     data.append(json.loads(line))
                 
-                df = pd.DataFrame(data)
+    #             df = pd.DataFrame(data)
                 
-                # Save the DataFrame to a CSV file
-                df.to_csv(csv_file_path, index=False)
+    #             # Save the DataFrame to a CSV file
+    #             df.to_csv(csv_file_path, index=False)
 

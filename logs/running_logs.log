@@ -361,3 +361,9 @@ x==========x]
 [2023-12-30 23:43:57,010: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
 
 x==========x]
+[2024-02-04 11:47:10,835: INFO: config: PyTorch version 2.1.2 available.]
+[2024-02-04 11:47:10,835: INFO: config: TensorFlow version 2.15.0 available.]
+[2024-02-04 11:51:23,982: INFO: config: PyTorch version 2.1.2 available.]
+[2024-02-04 11:51:23,982: INFO: config: TensorFlow version 2.15.0 available.]
+[2024-02-04 11:52:17,798: INFO: config: PyTorch version 2.1.2 available.]
+[2024-02-04 11:52:17,798: INFO: config: TensorFlow version 2.15.0 available.]

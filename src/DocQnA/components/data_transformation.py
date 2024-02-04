@@ -1,13 +1,20 @@
 from DocQnA.logging import logger
 from transformers import AutoTokenizer
 from datasets import Dataset
-from DocQnA.entity import DataTransformationConfig
+from entity import DataTransformationConfig
+from utils import read_yaml
+
+# Load the configuration using the utility function
+config = read_yaml('config.yaml')
+
+# Create an instance of DataTransformationConfig
+data_transformation_config = DataTransformationConfig(**config['data_transformation'])
 
 class DataTransformation(Dataset):
-    def __init__(self,data,config: DataTransformationConfig):
+    def __init__(self, data):
         super().__init__(data)
-        self.config = config
-        self.tokenizer= AutoTokenizer.from_pretrained(config.tokenizer_name)
+        self.config = data_transformation_config
+        self.tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_name)
         logger.info("DataTransformation initialized")
         
     def __len__(self):
