@@ -20,7 +20,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # ENV MODE=web
 
 # Copy the main.py script into the container
-COPY main.py /app/app.py
+COPY app.py /app/app.py
 
 # Run main.py when the container launches
 CMD ["python", "/app/app.py"]

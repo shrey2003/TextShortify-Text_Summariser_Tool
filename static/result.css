@@ -1301,14 +1301,14 @@ footer {
     background-color: #ddd; /* Light grey background for user's messages */
     color: black; /* Black text for user's messages */
     margin-left: auto; /* Align user's messages to the right */
-    margin-right: 26vw; /* Space between user's messages and the right edge of the screen */
+    margin-right: 22vw; /* Space between user's messages and the right edge of the screen */
 }
 
 .chat-message-assistant {
     background-color: #0080ff; /* Blue background for assistant's messages */
     color: white; /* White text for assistant's messages */
     margin-right: auto; /* Align assistant's messages to the left */
-    margin-left: 26vw; /* Space between assistant's messages and the left edge of the screen */
+    margin-left: 18vw; /* Space between assistant's messages and the left edge of the screen */
 }
 
 @keyframes fadeIn {
@@ -1364,7 +1364,7 @@ footer {
 {
   background-color: #ddd;
   color: black;
-  margin-left: 26vw;
+  margin-left: 22vw;
   margin-right: auto;
   background: linear-gradient(135deg, #ddd, #ccc);
   margin-top: 5%;
@@ -1382,7 +1382,7 @@ footer {
   background-color: #0080ff;
   color: white;
   margin-left: auto;
-  margin-right: 26vw;
+  margin-right: 18vw;
   background: linear-gradient(135deg, #0080ff, #0066cc);
   margin-top: 4%;
   margin-bottom: 4%;

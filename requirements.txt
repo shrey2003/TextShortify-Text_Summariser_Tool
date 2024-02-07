@@ -1,27 +1,29 @@
 transformers
 transformers[sentencepiece]
-datasets
-sacrebleu
-rouge_score
-py7zr
+# datasets
+# sacrebleu
+# rouge_score
+# py7zr
 pandas
-nltk
+# nltk
 tqdm
-PyYAML
+# PyYAML
 matplotlib
-torch
-notebook
-fastapi
+# torch
+# notebook
+# fastapi
+flask
 uvicorn
 Jinja2
-ensure
-python-box
+# ensure
+# python-box
 trl
 langchain
 langchain-community
 sentence-transformers
 llama-cpp-python
 faiss-cpu
+logger
 # streamlit
 # streamlit_chat
 PyPDF2
