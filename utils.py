@@ -22,7 +22,7 @@ def create_llm():
     # Create llm
     llm = LlamaCpp(
         streaming = True,
-        model_path="artifacts\\trained_model\\zephyr-7b-beta.Q5_K_S.gguf",
+        model_path="artifacts//trained_model//zephyr-7b-beta.Q5_K_S.gguf",
         temperature=0.3,
         top_p=0.8,
         verbose=True,
