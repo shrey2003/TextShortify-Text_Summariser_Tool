@@ -6,10 +6,10 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
-- [Workflows](#Workflows)
+- [Workflows](#workflows)
 - [License](#license)
 ## Overview
-![SampleImage]()
+![SampleImage](https://github.com/shrey2003/docq/blob/main/static/pic_1.png)<br />
 DocQnA is a two-phase document question-answering system that combines advanced natural language processing techniques with a robust data ingestion and transformation pipeline. The first phase involves fine-tuning a language model, while the second phase focuses on deploying the system for real-time document question answering. <br />
 It is deployed on Azure having Website Link: [https://dockyqna.azurewebsites.net/] <br />
 You can find my finetuned version of Zephyr-7B Model for document question-answering here<br />
@@ -66,7 +66,7 @@ The application can be deployed using Docker. A Dockerfile is provided for build
 ### Build the Docker image:
 docker build -t docqna .<br />
 ### Run the Docker container:
-docker run -p   7000:7000 docqna
+docker run -p   7000:7000 docqna<br />
 
 ## Workflows
 
