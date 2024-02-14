@@ -19,6 +19,8 @@ Link: [https://huggingface.co/Feluda/Zephyr-7b-QnA]
 ## Phases
 ### Phase 1: Fine-Tuning:
 This phase involves training and fine-tuning a Zephyr-7B Model language model on a dataset of choice. The fine-tuned model is then saved for later use in the DocQnA system. <br />
+This is the training results of my model: ![image](https://github.com/shrey2003/docq/assets/59368657/c7b8c260-eade-4f08-b445-9fc2fbef4d31)
+
 ### Phase 2: Deployment: 
 In this phase, the fine-tuned language model is integrated with a document retrieval system to provide accurate and contextually relevant responses to user queries.
 
