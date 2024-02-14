@@ -1,4 +1,4 @@
-# DocQnA: Two-Phase Document Question Answering System
+# DocQnA: Document Question Answering System
 
 ## Table of Contents
 - [Overview](#overview)
