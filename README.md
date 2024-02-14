@@ -6,15 +6,19 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
-- [Contributing](#contributing)
+- [Workflows](#Workflows)
 - [License](#license)
 ## Overview
+![SampleImage]()
 DocQnA is a two-phase document question-answering system that combines advanced natural language processing techniques with a robust data ingestion and transformation pipeline. The first phase involves fine-tuning a language model, while the second phase focuses on deploying the system for real-time document question answering. <br />
-It is deployed on Azure having Website Link: [https://dockyqna.azurewebsites.net/]
+It is deployed on Azure having Website Link: [https://dockyqna.azurewebsites.net/] <br />
+You can find my finetuned version of Zephyr-7B Model for document question-answering here<br />
+Hugging Face 
+Link: [https://huggingface.co/Feluda/Zephyr-7b-QnA] 
 
 ## Phases
 ### Phase 1: Fine-Tuning:
-This phase involves training and fine-tuning a language model on a dataset of choice. The fine-tuned model is then saved for later use in the DocQnA system. <br />
+This phase involves training and fine-tuning a Zephyr-7B Model language model on a dataset of choice. The fine-tuned model is then saved for later use in the DocQnA system. <br />
 ### Phase 2: Deployment: 
 In this phase, the fine-tuned language model is integrated with a document retrieval system to provide accurate and contextually relevant responses to user queries.
 
@@ -72,9 +76,6 @@ docker login docqna.azurecr.io
 
 docker push docqna.azurecr.io/docqna:latest
 
-## Contributing
-Your contributions are always welcome! Please have a look at the contribution guidelines first.
-
 ## License
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/shrey2003/docq/blob/main/LICENSE) for more information.
 
